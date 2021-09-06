@@ -14,6 +14,8 @@ Projeto open source, criado para testar conhecimentos :D
 ## Documentação:
 Importar o arquivo `wa-clinic-docs.json` na plataforma insomnia: https://insomnia.rest/download
 
+## Deploy
+  Deploy feito utilizando heroku, o app esta acessível por este endereço: https://wa-clinic.herokuapp.com
 ## Arquitetura: 
   - Api: Diretório pai da api
     - config: Diretórios de configuração
