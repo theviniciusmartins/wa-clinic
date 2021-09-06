@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  api:
+    expose:
+    - 4000
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    volumes:
+      - ./api/:/app
+      - ./api/node_modules:/app/node_modules
+    ports:
+      - '4000:4000'
+    depends_on:
+      - postgres
+    networks:
+      - postgres-network
+  
+  postgres:
+    image: postgres
+    hostname: postgres
+    environment:
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data 
+    networks:
+      - postgres-network
+    
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "root@mail.com"
+      PGADMIN_DEFAULT_PASSWORD: "root!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres
+    networks:
+      - postgres-network
+
+networks: 
+  postgres-network:
+    driver: bridge
+
+
+  
