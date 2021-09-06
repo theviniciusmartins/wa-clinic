@@ -1,1 +1,0 @@
-start: ./api npm run start
