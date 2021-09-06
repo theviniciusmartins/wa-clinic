@@ -14,7 +14,8 @@ dotenv.config();
 
 // ==> Conexão com a Base de Dados:
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.SSL_ACTIVE ? true : false
 });
 
 pool.on('connect', () => {

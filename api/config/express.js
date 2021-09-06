@@ -6,6 +6,7 @@ module.exports = () => {
 
     // SETANDO VARIÁVEIS DA APLICAÇÃO
     app.set('port', process.env.PORT || config.get('server.port'));
+    app.use(express.json())
 
     return app;
 };
