@@ -25,7 +25,7 @@ Importar o arquivo `wa-clinic-docs.json` na plataforma insomnia: https://insomni
   - data: Diretório em que o docker deve armazenar o conteúdo do banco de dados
   - database_scruture.sql : Arquivo que contém os scripts para serem executados
   - docker-compose: Definição dos containers
-  - wa-clinic-docs-json:
+  - wa-clinic-docs-json: Arquivo de configuração da documentação
 
 ###
 
