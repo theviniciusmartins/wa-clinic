@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --inspect=0.0.0.0:9229 -L index.js",
-    "migrate": "node-pg-migrate"
+    "start": "node index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
